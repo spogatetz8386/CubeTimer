@@ -12,18 +12,37 @@ class MainViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        collectionView?.register(navigationCollectionCell.self, forCellWithReuseIdentifier: "navCell")
+    }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = navigationCollectionCell(name: "Test", frame: nil)
+        collectionView.dequeueReusableCell(withReuseIdentifier: "navCell", for: indexPath)
     }
 }
 
 
 class navigationCollectionCell : UICollectionViewCell{
-    var image : UIImage
+    //var image : UIImage?
     var name : String
     
-    init(name : String, image : UIImage, frame : CGRect) {
-        self.image = image
+    let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(navigationCollectionCell.onTap))
+    
+    init(name : String, frame : CGRect) {
+        //self.image = image
         self.name = name
         super.init(frame: frame)
+        self.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func onTap(){
+        print("\(self.name) tapped.")
     }
     
     required init?(coder aDecoder: NSCoder) {
