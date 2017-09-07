@@ -22,8 +22,8 @@ class MainViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = navigationCollectionCell(name: "Test", frame: nil)
-        collectionView.dequeueReusableCell(withReuseIdentifier: "navCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "navCell", for: indexPath) as! navigationCollectionCell
+        return cell
     }
 }
 
@@ -36,7 +36,7 @@ class navigationCollectionCell : UICollectionViewCell{
     
     init(name : String, frame : CGRect) {
         //self.image = image
-        self.name = name
+        self.name = "Test"
         super.init(frame: frame)
         self.addGestureRecognizer(gestureRecognizer)
     }
