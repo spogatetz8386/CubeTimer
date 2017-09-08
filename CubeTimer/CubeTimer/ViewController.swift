@@ -12,37 +12,34 @@ class MainViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.delegate = self
-        collectionView?.dataSource = self
-        collectionView?.register(navigationCollectionCell.self, forCellWithReuseIdentifier: "navCell")
+        print("View did load")
+        guard let collectionView = self.collectionView else { return }
+        collectionView.delegate = self
+        collectionView.frame = UIScreen.main.bounds
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .blue
+        collectionView.register(navigationCollectionCell.self, forCellWithReuseIdentifier: "navCell")
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        print("Number of sections")
+        return 10
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("cellForItemAt")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "navCell", for: indexPath) as! navigationCollectionCell
+        cell.backgroundColor = .red
+
         return cell
     }
 }
 
 
 class navigationCollectionCell : UICollectionViewCell{
-    //var image : UIImage?
-    var name : String
-    
-    let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(navigationCollectionCell.onTap))
-    
-    init(name : String, frame : CGRect) {
-        //self.image = image
-        self.name = "Test"
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addGestureRecognizer(gestureRecognizer)
-    }
-    
-    func onTap(){
-        print("\(self.name) tapped.")
+        print("creted")
     }
     
     required init?(coder aDecoder: NSCoder) {
