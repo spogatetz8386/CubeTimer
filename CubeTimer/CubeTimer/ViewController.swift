@@ -1,48 +1,63 @@
-//
-//  ViewController.swift
-//  CubeTimer
-//
-//  Created by apcs2 on 9/6/17.
-//  Copyright © 2017 apcs2. All rights reserved.
-//
-
 import UIKit
 
-class MainViewController: UICollectionViewController {
-
+class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("View did load")
-        guard let collectionView = self.collectionView else { return }
-        collectionView.delegate = self
-        collectionView.frame = UIScreen.main.bounds
-        collectionView.dataSource = self
-        collectionView.backgroundColor = .blue
-        collectionView.register(navigationCollectionCell.self, forCellWithReuseIdentifier: "navCell")
+        
+        collectionView?.backgroundColor = UIColor.white
+        
+        collectionView?.register(NavCell.self, forCellWithReuseIdentifier: identifier)
     }
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        print("Number of sections")
-        return 10
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
     }
+    
+    let identifier = "identifier"
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("cellForItemAt")
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "navCell", for: indexPath) as! navigationCollectionCell
-        cell.backgroundColor = .red
-
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+    
+    
+    
 }
 
-
-class navigationCollectionCell : UICollectionViewCell{
+class NavCell: UICollectionViewCell {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("creted")
+        setupViews()
+    }
+    
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "My Custom CollectionView"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    func setupViews() {
+        backgroundColor = UIColor.red
+        
+        addSubview(nameLabel)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }

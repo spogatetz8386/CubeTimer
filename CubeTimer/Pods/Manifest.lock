@@ -1,0 +1,17 @@
+PODS:
+  - PSTCollectionView (1.2.3)
+  - RDHCollectionViewGridLayout/Core (1.0.0)
+  - RDHCollectionViewGridLayout/PST (1.0.0):
+    - PSTCollectionView
+    - RDHCollectionViewGridLayout/Core
+
+DEPENDENCIES:
+  - RDHCollectionViewGridLayout/PST (< 1.1)
+
+SPEC CHECKSUMS:
+  PSTCollectionView: 6749df92885353521f55279a7ce2b293762e2be4
+  RDHCollectionViewGridLayout: 4d989508b15bc5e0d96464ca32c16b0c5848a52a
+
+PODFILE CHECKSUM: 335cb3a2cc20bc63b08f347edce2705a95b765e0
+
+COCOAPODS: 1.1.1

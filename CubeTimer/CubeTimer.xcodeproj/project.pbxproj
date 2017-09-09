@@ -12,6 +12,7 @@
 		2116078E1F60406E00E68552 /* CubeTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2116078C1F60406E00E68552 /* CubeTimer.xcdatamodeld */; };
 		211607901F60406E00E68552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2116078F1F60406E00E68552 /* Assets.xcassets */; };
 		211607931F60406E00E68552 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211607911F60406E00E68552 /* LaunchScreen.storyboard */; };
+		A115EEDDFBFACF1E8CAA9D6E /* libPods-CubeTimer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE47D2ADE72F9E27AAAD60B /* libPods-CubeTimer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		2116078F1F60406E00E68552 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211607921F60406E00E68552 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		211607941F60406E00E68552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5071CFFC72E9CDE02AAD59DE /* Pods-CubeTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		7FE47D2ADE72F9E27AAAD60B /* libPods-CubeTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CubeTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		960776E1AC5EDBD167939799 /* Pods-CubeTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A115EEDDFBFACF1E8CAA9D6E /* libPods-CubeTimer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				211607841F60406E00E68552 /* CubeTimer */,
 				211607831F60406E00E68552 /* Products */,
+				6BA0E25C62C7CB37E1F7DCFF /* Pods */,
+				B2E169192CD62248164537CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = CubeTimer;
 			sourceTree = "<group>";
 		};
+		6BA0E25C62C7CB37E1F7DCFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5071CFFC72E9CDE02AAD59DE /* Pods-CubeTimer.debug.xcconfig */,
+				960776E1AC5EDBD167939799 /* Pods-CubeTimer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2E169192CD62248164537CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FE47D2ADE72F9E27AAAD60B /* libPods-CubeTimer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 211607971F60406E00E68552 /* Build configuration list for PBXNativeTarget "CubeTimer" */;
 			buildPhases = (
+				97C08418E8F8D84AB1EB3928 /* [CP] Check Pods Manifest.lock */,
 				2116077E1F60406E00E68552 /* Sources */,
 				2116077F1F60406E00E68552 /* Frameworks */,
 				211607801F60406E00E68552 /* Resources */,
+				4907832B42DB5D112C7C17E7 /* [CP] Embed Pods Frameworks */,
+				66A666B2431D673FCEE096B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4907832B42DB5D112C7C17E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66A666B2431D673FCEE096B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97C08418E8F8D84AB1EB3928 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2116077E1F60406E00E68552 /* Sources */ = {
@@ -252,10 +327,11 @@
 		};
 		211607981F60406E00E68552 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5071CFFC72E9CDE02AAD59DE /* Pods-CubeTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CubeTimer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-61.CubeTimer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -265,10 +341,11 @@
 		};
 		211607991F60406E00E68552 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 960776E1AC5EDBD167939799 /* Pods-CubeTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CubeTimer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-61.CubeTimer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
