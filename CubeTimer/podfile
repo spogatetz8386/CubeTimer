@@ -1,2 +1,2 @@
 target "CubeTimer"
-pod "RDHCollectionViewGridLayout/PST", "< 1.1"
+

@@ -7,186 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D134095EE3B1E64C461F86C9B25B682 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */; };
-		0F3C2CC0F38AC0393DCA2CEEDC6C0AA2 /* PSTCollectionViewCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A458D9B78B603EBA2960F419B2A5675 /* PSTCollectionViewCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1458ACCE6BE57143B701B63E6DC620CB /* PSTCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B35A790C305C88AB6C3090AD46A6B1D0 /* PSTCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DB37BB201EB1FD829ACAA95BC0A5658 /* RDHCollectionViewGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC627FB0DC009B8B6C2BDA71A3ABB49 /* RDHCollectionViewGridLayout.m */; };
-		29DFAC20437F7C819A66FC00E89E4C94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */; };
-		2B0FE795A504CD5B37CD412D938EAAD4 /* PSTGridLayoutRow.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C8AD0AFBF23D3BE2C9FF5114767A82 /* PSTGridLayoutRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32FDE7A9B7E0DEF20A655F0F1A171D91 /* PSTCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB93AF279745831A722A759A703470DB /* PSTCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34135FBE1B92B3F7FCE413001AABE359 /* PSTCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C2A1310C793B078825D7E6078341C /* PSTCollectionViewFlowLayout.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3422D77D887D216B9875F92D516B0EF9 /* PSTGridLayoutItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE7C97B5C3758F6F62A6BE679D4A95D /* PSTGridLayoutItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		567A38DA446852BF76EA99862EAAF09B /* PSTGridLayoutRow.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B554B71B0FE559006CA2518DE0B8D9 /* PSTGridLayoutRow.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5DFA2BC522C5B1ADB8DF76050012BB84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		5FBE8AC513759373AA3F770F9A1DD0C1 /* PSTCollectionViewItemKey.h in Headers */ = {isa = PBXBuildFile; fileRef = F169A353CA9F6CB6460D8935EB40B239 /* PSTCollectionViewItemKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66FADC456B0A9D61FC981A9CB8EF81BD /* PSTCollectionViewData.h in Headers */ = {isa = PBXBuildFile; fileRef = C381273AE8A7537F6DE48B11BE29395F /* PSTCollectionViewData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E5317C2BBBEA1F02F4777C44D3C8DDE /* PSTGridLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F755B55A260944EF6BE7D62321A60F5 /* PSTGridLayoutItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		728E6EC866D2AFD66B421044F247D6D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		76DE44F667E31E1FF5C2862FBECA143F /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01C85B4E0C6EB2E9940918EEEEF2B2 /* NSIndexPath+PSTCollectionViewAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7BDA5E16D2CD61C602874CB5E21DA34C /* PSTCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 60E98A3D7262FF9419EC02C5859F5091 /* PSTCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7ED92EA374269945F117F0838096F62B /* PSTCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAC244F9F0B0C159E2071277D10DB6A /* PSTCollectionViewLayout.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7FC3436E9BAF531F93A07C399172345F /* PSTGridLayoutInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A0478946584B209B102FBE14C6D749DB /* PSTGridLayoutInfo.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		80D5A4492C602BEFFB1AEAE0ED35CE47 /* PSTCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E7FD84D20CF9F7BB80DA7A45D8A3D831 /* PSTCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C39278B1E6501056B0F0B1D79C75A13 /* PSTGridLayoutInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9E772F7F5649385A582817785D0F63 /* PSTGridLayoutInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95B72481EBAF7762F308BB6CAF304F2A /* PSTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0FBDBDC2058D0A299785D4D7D47159 /* PSTCollectionViewCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9834F9D51309B87594DDC6E8A8A23942 /* RDHCollectionViewGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2782CD01978975C795A7744E76187E /* RDHCollectionViewGridLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A407CD24AC3A2B2D363ED0CF50488DC /* PSTGridLayoutSection.h in Headers */ = {isa = PBXBuildFile; fileRef = C62147E7AED55A58AE5119B87355D71B /* PSTGridLayoutSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3BEDD7A89FC745C55B876D39D00A593 /* PSTCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B773E3AFD0689D5368FD8245C7BB8F1B /* PSTCollectionView-dummy.m */; };
-		A6DDFA0E23BDAEDBE2ABE85CC20F7B96 /* PSTCollectionViewLayout+Internals.h in Headers */ = {isa = PBXBuildFile; fileRef = 5249C64C0E35768964487A60CF9C0CDE /* PSTCollectionViewLayout+Internals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A83E427074277C31F7CFB3F960CBEC37 /* PSTCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37F62DE4716B8D2B66862F414439467 /* PSTCollectionViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AF5FADF9762359EF1B9417B64D36AEE4 /* PSTCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EBE7E9FF7A0549668684D01120C0FF7 /* PSTCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B52F58407848322D5EA4A378981CEE66 /* NSIndexPath+PSTCollectionViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 19BF2042F43508BDDF19C67C5AD15F93 /* NSIndexPath+PSTCollectionViewAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5F51C023D60F62C63B3A22FC55440E3 /* PSTCollectionViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7390FE86295F342295A6FA89B497D3A2 /* PSTCollectionViewUpdateItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B6313C369D0792694875EF97132BB3E3 /* PSTGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09556B835E8ADB86458662937F41D7BB /* PSTGridLayoutSection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BC8BF9516D85561326D506C05AD0E152 /* PSTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4B0AF1BB43770561A422F5901FB8C7 /* PSTCollectionView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C0A1D57B174FCBFB2ADBE36673817B2B /* Pods-CubeTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AA52CFFE3A996D82F5DDE5F62D6DB7 /* Pods-CubeTimer-dummy.m */; };
-		CA54F90AB3A9406F0D3FC77607BEFAA1 /* PSTCollectionViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DF3DEFC59FB2E4BFC11FB6D600C82A /* PSTCollectionViewData.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CAD17B1C82B653986EAAC65848A487C8 /* RDHCollectionViewGridLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB79B88B7E57A90C8790D2843A0396 /* RDHCollectionViewGridLayout-dummy.m */; };
-		CD9CFFB10B5FC97292B7C27B43EF058C /* PSTCollectionViewItemKey.m in Sources */ = {isa = PBXBuildFile; fileRef = A01690A26EC790D147F170B908088D58 /* PSTCollectionViewItemKey.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D069095934678C7705A3F071247239F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		E47F46FE17F3BE7A7C4E302AED30F94C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */; };
-		F48BA726C6D174B11086A31CB4411596 /* PSTCollectionViewUpdateItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BAF4E709CF15332BFB1954E7CFC63E2F /* PSTCollectionViewUpdateItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB28A47B470DFCD62295947FA7C55D71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */; };
+		33900F3F9D4C5124C0B7826F89E7F2A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		A07D64B1ADBC55F1242EF300B383863C /* Pods-CubeTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AA52CFFE3A996D82F5DDE5F62D6DB7 /* Pods-CubeTimer-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6DA2CEC098C60EECE15E929031AAEE87 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A3940ED5F5F96B1734A6D81F08DFC4C;
-			remoteInfo = RDHCollectionViewGridLayout;
-		};
-		BE240F216175E7812067ED5C06E5AD53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D765F36A95F39E8D1443C5DA63D0FA80;
-			remoteInfo = PSTCollectionView;
-		};
-		E71A45A41496B2C8C6095D3A7BA5E9E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D765F36A95F39E8D1443C5DA63D0FA80;
-			remoteInfo = PSTCollectionView;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		022F3A3621256D7DD444D2F37A5B10A1 /* libPSTCollectionView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPSTCollectionView.a; path = libPSTCollectionView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		09556B835E8ADB86458662937F41D7BB /* PSTGridLayoutSection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTGridLayoutSection.m; path = PSTCollectionView/PSTGridLayoutSection.m; sourceTree = "<group>"; };
-		0C0F4592DAAFEF4788DEE3A09BA657AB /* RDHCollectionViewGridLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RDHCollectionViewGridLayout.xcconfig; sourceTree = "<group>"; };
-		0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		0F755B55A260944EF6BE7D62321A60F5 /* PSTGridLayoutItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTGridLayoutItem.m; path = PSTCollectionView/PSTGridLayoutItem.m; sourceTree = "<group>"; };
-		19BF2042F43508BDDF19C67C5AD15F93 /* NSIndexPath+PSTCollectionViewAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+PSTCollectionViewAdditions.h"; path = "PSTCollectionView/NSIndexPath+PSTCollectionViewAdditions.h"; sourceTree = "<group>"; };
-		1A2782CD01978975C795A7744E76187E /* RDHCollectionViewGridLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDHCollectionViewGridLayout.h; path = RDHCollectionViewGridLayout/RDHCollectionViewGridLayout.h; sourceTree = "<group>"; };
-		2A458D9B78B603EBA2960F419B2A5675 /* PSTCollectionViewCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionViewCommon.h; path = PSTCollectionView/PSTCollectionViewCommon.h; sourceTree = "<group>"; };
-		2E9E772F7F5649385A582817785D0F63 /* PSTGridLayoutInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTGridLayoutInfo.h; path = PSTCollectionView/PSTGridLayoutInfo.h; sourceTree = "<group>"; };
-		2EC627FB0DC009B8B6C2BDA71A3ABB49 /* RDHCollectionViewGridLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDHCollectionViewGridLayout.m; path = RDHCollectionViewGridLayout/RDHCollectionViewGridLayout.m; sourceTree = "<group>"; };
 		469AB64B052CF15BD4B90663BF58F4AC /* Pods-CubeTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CubeTimer.debug.xcconfig"; sourceTree = "<group>"; };
-		51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		5249C64C0E35768964487A60CF9C0CDE /* PSTCollectionViewLayout+Internals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PSTCollectionViewLayout+Internals.h"; path = "PSTCollectionView/PSTCollectionViewLayout+Internals.h"; sourceTree = "<group>"; };
-		60E98A3D7262FF9419EC02C5859F5091 /* PSTCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionViewLayout.h; path = PSTCollectionView/PSTCollectionViewLayout.h; sourceTree = "<group>"; };
-		6284D47797263D2A9F29D3FEAB1202C0 /* libPods-CubeTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CubeTimer.a"; path = "libPods-CubeTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63B3C5A3F3AC04E18B38BD68966A1A44 /* PSTCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PSTCollectionView.xcconfig; sourceTree = "<group>"; };
-		6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7390FE86295F342295A6FA89B497D3A2 /* PSTCollectionViewUpdateItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTCollectionViewUpdateItem.m; path = PSTCollectionView/PSTCollectionViewUpdateItem.m; sourceTree = "<group>"; };
-		74DF3DEFC59FB2E4BFC11FB6D600C82A /* PSTCollectionViewData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTCollectionViewData.m; path = PSTCollectionView/PSTCollectionViewData.m; sourceTree = "<group>"; };
+		5EE4D538C86343FFAE18800A0C3F9EEF /* libPods-CubeTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CubeTimer.a"; path = "libPods-CubeTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		891DA8F075C3C81C8D141EE5533284AE /* Pods-CubeTimer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CubeTimer-resources.sh"; sourceTree = "<group>"; };
-		934C24AEED740995A80F360EA7DCF2B1 /* PSTCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PSTCollectionView-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9AC465993AB4053140A03F58F869C45C /* Pods-CubeTimer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CubeTimer-frameworks.sh"; sourceTree = "<group>"; };
-		9EBE7E9FF7A0549668684D01120C0FF7 /* PSTCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionViewController.h; path = PSTCollectionView/PSTCollectionViewController.h; sourceTree = "<group>"; };
-		9EE7C97B5C3758F6F62A6BE679D4A95D /* PSTGridLayoutItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTGridLayoutItem.h; path = PSTCollectionView/PSTGridLayoutItem.h; sourceTree = "<group>"; };
-		A01690A26EC790D147F170B908088D58 /* PSTCollectionViewItemKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTCollectionViewItemKey.m; path = PSTCollectionView/PSTCollectionViewItemKey.m; sourceTree = "<group>"; };
-		A0478946584B209B102FBE14C6D749DB /* PSTGridLayoutInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTGridLayoutInfo.m; path = PSTCollectionView/PSTGridLayoutInfo.m; sourceTree = "<group>"; };
-		AB93AF279745831A722A759A703470DB /* PSTCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionViewCell.h; path = PSTCollectionView/PSTCollectionViewCell.h; sourceTree = "<group>"; };
-		ADAC244F9F0B0C159E2071277D10DB6A /* PSTCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTCollectionViewLayout.m; path = PSTCollectionView/PSTCollectionViewLayout.m; sourceTree = "<group>"; };
-		B35A790C305C88AB6C3090AD46A6B1D0 /* PSTCollectionViewFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionViewFlowLayout.h; path = PSTCollectionView/PSTCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		B6C8AD0AFBF23D3BE2C9FF5114767A82 /* PSTGridLayoutRow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTGridLayoutRow.h; path = PSTCollectionView/PSTGridLayoutRow.h; sourceTree = "<group>"; };
-		B773E3AFD0689D5368FD8245C7BB8F1B /* PSTCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PSTCollectionView-dummy.m"; sourceTree = "<group>"; };
 		B77C35A3B932179A42ECB2414046CEB7 /* Pods-CubeTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CubeTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BAF4E709CF15332BFB1954E7CFC63E2F /* PSTCollectionViewUpdateItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionViewUpdateItem.h; path = PSTCollectionView/PSTCollectionViewUpdateItem.h; sourceTree = "<group>"; };
-		BC1A94AC6EA9940ABF261A413E6EED81 /* libRDHCollectionViewGridLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRDHCollectionViewGridLayout.a; path = libRDHCollectionViewGridLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEBB983EABC9CAB75DF1AE84FDDA25E /* Pods-CubeTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CubeTimer.release.xcconfig"; sourceTree = "<group>"; };
-		C1EFA45EE978CFEC7618080375D41E5A /* RDHCollectionViewGridLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RDHCollectionViewGridLayout-prefix.pch"; sourceTree = "<group>"; };
-		C381273AE8A7537F6DE48B11BE29395F /* PSTCollectionViewData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionViewData.h; path = PSTCollectionView/PSTCollectionViewData.h; sourceTree = "<group>"; };
-		C5FB79B88B7E57A90C8790D2843A0396 /* RDHCollectionViewGridLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RDHCollectionViewGridLayout-dummy.m"; sourceTree = "<group>"; };
-		C62147E7AED55A58AE5119B87355D71B /* PSTGridLayoutSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTGridLayoutSection.h; path = PSTCollectionView/PSTGridLayoutSection.h; sourceTree = "<group>"; };
 		C7AA52CFFE3A996D82F5DDE5F62D6DB7 /* Pods-CubeTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CubeTimer-dummy.m"; sourceTree = "<group>"; };
-		CA0FBDBDC2058D0A299785D4D7D47159 /* PSTCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTCollectionViewCell.m; path = PSTCollectionView/PSTCollectionViewCell.m; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CD33E9A1324531B4247949AE4B521701 /* Pods-CubeTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CubeTimer-acknowledgements.plist"; sourceTree = "<group>"; };
-		CD4B0AF1BB43770561A422F5901FB8C7 /* PSTCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTCollectionView.m; path = PSTCollectionView/PSTCollectionView.m; sourceTree = "<group>"; };
-		E7FD84D20CF9F7BB80DA7A45D8A3D831 /* PSTCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionView.h; path = PSTCollectionView/PSTCollectionView.h; sourceTree = "<group>"; };
-		E8B554B71B0FE559006CA2518DE0B8D9 /* PSTGridLayoutRow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTGridLayoutRow.m; path = PSTCollectionView/PSTGridLayoutRow.m; sourceTree = "<group>"; };
-		EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EF01C85B4E0C6EB2E9940918EEEEF2B2 /* NSIndexPath+PSTCollectionViewAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSIndexPath+PSTCollectionViewAdditions.m"; path = "PSTCollectionView/NSIndexPath+PSTCollectionViewAdditions.m"; sourceTree = "<group>"; };
-		F169A353CA9F6CB6460D8935EB40B239 /* PSTCollectionViewItemKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSTCollectionViewItemKey.h; path = PSTCollectionView/PSTCollectionViewItemKey.h; sourceTree = "<group>"; };
-		F30C2A1310C793B078825D7E6078341C /* PSTCollectionViewFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTCollectionViewFlowLayout.m; path = PSTCollectionView/PSTCollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		F37F62DE4716B8D2B66862F414439467 /* PSTCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSTCollectionViewController.m; path = PSTCollectionView/PSTCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		634085B40C5214056176C80180BA1F81 /* Frameworks */ = {
+		15A6CF7408DFBD009C85ED60FFCBB233 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D069095934678C7705A3F071247239F3 /* Foundation.framework in Frameworks */,
-				E47F46FE17F3BE7A7C4E302AED30F94C /* QuartzCore.framework in Frameworks */,
-				0D134095EE3B1E64C461F86C9B25B682 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A048C14806E41EE84349928F3AA4254 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29DFAC20437F7C819A66FC00E89E4C94 /* CoreGraphics.framework in Frameworks */,
-				5DFA2BC522C5B1ADB8DF76050012BB84 /* Foundation.framework in Frameworks */,
-				FB28A47B470DFCD62295947FA7C55D71 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D880FFC2CFFE3BCFD7EA3B1A1C6A2DC6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				728E6EC866D2AFD66B421044F247D6D0 /* Foundation.framework in Frameworks */,
+				33900F3F9D4C5124C0B7826F89E7F2A4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02046ED63F0AFCF5DE107C104301D36D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7EC68AC164C006A57750607D97F8E08B /* PSTCollectionView */,
-				D360C1CAB3E665F786D2A63DCDF6112D /* RDHCollectionViewGridLayout */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2691F93227E549B2A03FB9E6D0C3C623 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2691F93227E549B2A03FB9E6D0C3C623 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */,
-				6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */,
-				51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */,
-				EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		6B5DBD5E82380F69E26DE073ECDF230E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,93 +44,38 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		701781D414D8FAB2C31FD152ED5D137A /* Core */ = {
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1A2782CD01978975C795A7744E76187E /* RDHCollectionViewGridLayout.h */,
-				2EC627FB0DC009B8B6C2BDA71A3ABB49 /* RDHCollectionViewGridLayout.m */,
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
 			);
-			name = Core;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				02046ED63F0AFCF5DE107C104301D36D /* Pods */,
-				EC794276B06510E6A003D2131C71AF13 /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9C633FA88D60F8BBA1BE93215A03AC15 /* Products */,
 				6B5DBD5E82380F69E26DE073ECDF230E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7DBBC4E984E5A35FD020F820A1A4E2C4 /* Support Files */ = {
+		9C633FA88D60F8BBA1BE93215A03AC15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63B3C5A3F3AC04E18B38BD68966A1A44 /* PSTCollectionView.xcconfig */,
-				B773E3AFD0689D5368FD8245C7BB8F1B /* PSTCollectionView-dummy.m */,
-				934C24AEED740995A80F360EA7DCF2B1 /* PSTCollectionView-prefix.pch */,
+				5EE4D538C86343FFAE18800A0C3F9EEF /* libPods-CubeTimer.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/PSTCollectionView";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		7EC68AC164C006A57750607D97F8E08B /* PSTCollectionView */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				19BF2042F43508BDDF19C67C5AD15F93 /* NSIndexPath+PSTCollectionViewAdditions.h */,
-				EF01C85B4E0C6EB2E9940918EEEEF2B2 /* NSIndexPath+PSTCollectionViewAdditions.m */,
-				E7FD84D20CF9F7BB80DA7A45D8A3D831 /* PSTCollectionView.h */,
-				CD4B0AF1BB43770561A422F5901FB8C7 /* PSTCollectionView.m */,
-				AB93AF279745831A722A759A703470DB /* PSTCollectionViewCell.h */,
-				CA0FBDBDC2058D0A299785D4D7D47159 /* PSTCollectionViewCell.m */,
-				2A458D9B78B603EBA2960F419B2A5675 /* PSTCollectionViewCommon.h */,
-				9EBE7E9FF7A0549668684D01120C0FF7 /* PSTCollectionViewController.h */,
-				F37F62DE4716B8D2B66862F414439467 /* PSTCollectionViewController.m */,
-				C381273AE8A7537F6DE48B11BE29395F /* PSTCollectionViewData.h */,
-				74DF3DEFC59FB2E4BFC11FB6D600C82A /* PSTCollectionViewData.m */,
-				B35A790C305C88AB6C3090AD46A6B1D0 /* PSTCollectionViewFlowLayout.h */,
-				F30C2A1310C793B078825D7E6078341C /* PSTCollectionViewFlowLayout.m */,
-				F169A353CA9F6CB6460D8935EB40B239 /* PSTCollectionViewItemKey.h */,
-				A01690A26EC790D147F170B908088D58 /* PSTCollectionViewItemKey.m */,
-				60E98A3D7262FF9419EC02C5859F5091 /* PSTCollectionViewLayout.h */,
-				ADAC244F9F0B0C159E2071277D10DB6A /* PSTCollectionViewLayout.m */,
-				5249C64C0E35768964487A60CF9C0CDE /* PSTCollectionViewLayout+Internals.h */,
-				BAF4E709CF15332BFB1954E7CFC63E2F /* PSTCollectionViewUpdateItem.h */,
-				7390FE86295F342295A6FA89B497D3A2 /* PSTCollectionViewUpdateItem.m */,
-				2E9E772F7F5649385A582817785D0F63 /* PSTGridLayoutInfo.h */,
-				A0478946584B209B102FBE14C6D749DB /* PSTGridLayoutInfo.m */,
-				9EE7C97B5C3758F6F62A6BE679D4A95D /* PSTGridLayoutItem.h */,
-				0F755B55A260944EF6BE7D62321A60F5 /* PSTGridLayoutItem.m */,
-				B6C8AD0AFBF23D3BE2C9FF5114767A82 /* PSTGridLayoutRow.h */,
-				E8B554B71B0FE559006CA2518DE0B8D9 /* PSTGridLayoutRow.m */,
-				C62147E7AED55A58AE5119B87355D71B /* PSTGridLayoutSection.h */,
-				09556B835E8ADB86458662937F41D7BB /* PSTGridLayoutSection.m */,
-				7DBBC4E984E5A35FD020F820A1A4E2C4 /* Support Files */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
-			name = PSTCollectionView;
-			path = PSTCollectionView;
-			sourceTree = "<group>";
-		};
-		C7C9EBF331982ADAEDE0311D49C669A3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0C0F4592DAAFEF4788DEE3A09BA657AB /* RDHCollectionViewGridLayout.xcconfig */,
-				C5FB79B88B7E57A90C8790D2843A0396 /* RDHCollectionViewGridLayout-dummy.m */,
-				C1EFA45EE978CFEC7618080375D41E5A /* RDHCollectionViewGridLayout-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/RDHCollectionViewGridLayout";
-			sourceTree = "<group>";
-		};
-		D360C1CAB3E665F786D2A63DCDF6112D /* RDHCollectionViewGridLayout */ = {
-			isa = PBXGroup;
-			children = (
-				701781D414D8FAB2C31FD152ED5D137A /* Core */,
-				C7C9EBF331982ADAEDE0311D49C669A3 /* Support Files */,
-			);
-			name = RDHCollectionViewGridLayout;
-			path = RDHCollectionViewGridLayout;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D5B9C5211499E1A874CE0B22B870EB5B /* Pods-CubeTimer */ = {
@@ -299,103 +93,23 @@
 			path = "Target Support Files/Pods-CubeTimer";
 			sourceTree = "<group>";
 		};
-		EC794276B06510E6A003D2131C71AF13 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6284D47797263D2A9F29D3FEAB1202C0 /* libPods-CubeTimer.a */,
-				022F3A3621256D7DD444D2F37A5B10A1 /* libPSTCollectionView.a */,
-				BC1A94AC6EA9940ABF261A413E6EED81 /* libRDHCollectionViewGridLayout.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		5B490552E3DA29D4744B6D693A5A6890 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9834F9D51309B87594DDC6E8A8A23942 /* RDHCollectionViewGridLayout.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C233B4304DE169B7CD139607D1DC7BC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B52F58407848322D5EA4A378981CEE66 /* NSIndexPath+PSTCollectionViewAdditions.h in Headers */,
-				80D5A4492C602BEFFB1AEAE0ED35CE47 /* PSTCollectionView.h in Headers */,
-				32FDE7A9B7E0DEF20A655F0F1A171D91 /* PSTCollectionViewCell.h in Headers */,
-				0F3C2CC0F38AC0393DCA2CEEDC6C0AA2 /* PSTCollectionViewCommon.h in Headers */,
-				AF5FADF9762359EF1B9417B64D36AEE4 /* PSTCollectionViewController.h in Headers */,
-				66FADC456B0A9D61FC981A9CB8EF81BD /* PSTCollectionViewData.h in Headers */,
-				1458ACCE6BE57143B701B63E6DC620CB /* PSTCollectionViewFlowLayout.h in Headers */,
-				5FBE8AC513759373AA3F770F9A1DD0C1 /* PSTCollectionViewItemKey.h in Headers */,
-				A6DDFA0E23BDAEDBE2ABE85CC20F7B96 /* PSTCollectionViewLayout+Internals.h in Headers */,
-				7BDA5E16D2CD61C602874CB5E21DA34C /* PSTCollectionViewLayout.h in Headers */,
-				F48BA726C6D174B11086A31CB4411596 /* PSTCollectionViewUpdateItem.h in Headers */,
-				8C39278B1E6501056B0F0B1D79C75A13 /* PSTGridLayoutInfo.h in Headers */,
-				3422D77D887D216B9875F92D516B0EF9 /* PSTGridLayoutItem.h in Headers */,
-				2B0FE795A504CD5B37CD412D938EAAD4 /* PSTGridLayoutRow.h in Headers */,
-				9A407CD24AC3A2B2D363ED0CF50488DC /* PSTGridLayoutSection.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		3A3940ED5F5F96B1734A6D81F08DFC4C /* RDHCollectionViewGridLayout */ = {
+		875330EF4696CE39376A27263280F3A8 /* Pods-CubeTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1A789D84F59B7AA5E4A77B44B6D7A5B /* Build configuration list for PBXNativeTarget "RDHCollectionViewGridLayout" */;
+			buildConfigurationList = 7942963BCDA97DD20A54C57418AAC198 /* Build configuration list for PBXNativeTarget "Pods-CubeTimer" */;
 			buildPhases = (
-				7060D1E94D51A5216CC959B9D4CE902D /* Sources */,
-				6A048C14806E41EE84349928F3AA4254 /* Frameworks */,
-				5B490552E3DA29D4744B6D693A5A6890 /* Headers */,
+				855A4025737F2173925E75688437223B /* Sources */,
+				15A6CF7408DFBD009C85ED60FFCBB233 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				397F71867B783F6F9A46AE7F54AA1623 /* PBXTargetDependency */,
-			);
-			name = RDHCollectionViewGridLayout;
-			productName = RDHCollectionViewGridLayout;
-			productReference = BC1A94AC6EA9940ABF261A413E6EED81 /* libRDHCollectionViewGridLayout.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C6AC4086F7A200F56599692D441039D4 /* Pods-CubeTimer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9081E75B6E84B54ADC7E1ADEE92EFC81 /* Build configuration list for PBXNativeTarget "Pods-CubeTimer" */;
-			buildPhases = (
-				9D333E958A963A8CFED47052E92F3B16 /* Sources */,
-				D880FFC2CFFE3BCFD7EA3B1A1C6A2DC6 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B542511D5A1B005159E7175E8BA102FE /* PBXTargetDependency */,
-				8D5C4C0A567169D01BD1805BDB744B11 /* PBXTargetDependency */,
 			);
 			name = "Pods-CubeTimer";
 			productName = "Pods-CubeTimer";
-			productReference = 6284D47797263D2A9F29D3FEAB1202C0 /* libPods-CubeTimer.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D765F36A95F39E8D1443C5DA63D0FA80 /* PSTCollectionView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AEDC4F505A84B0BB75F8B5145E7C99BB /* Build configuration list for PBXNativeTarget "PSTCollectionView" */;
-			buildPhases = (
-				9F993A9AE91550BEDD9301FB5BFD488A /* Sources */,
-				634085B40C5214056176C80180BA1F81 /* Frameworks */,
-				9C233B4304DE169B7CD139607D1DC7BC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PSTCollectionView;
-			productName = PSTCollectionView;
-			productReference = 022F3A3621256D7DD444D2F37A5B10A1 /* libPSTCollectionView.a */;
+			productReference = 5EE4D538C86343FFAE18800A0C3F9EEF /* libPods-CubeTimer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -415,200 +129,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = EC794276B06510E6A003D2131C71AF13 /* Products */;
+			productRefGroup = 9C633FA88D60F8BBA1BE93215A03AC15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C6AC4086F7A200F56599692D441039D4 /* Pods-CubeTimer */,
-				D765F36A95F39E8D1443C5DA63D0FA80 /* PSTCollectionView */,
-				3A3940ED5F5F96B1734A6D81F08DFC4C /* RDHCollectionViewGridLayout */,
+				875330EF4696CE39376A27263280F3A8 /* Pods-CubeTimer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7060D1E94D51A5216CC959B9D4CE902D /* Sources */ = {
+		855A4025737F2173925E75688437223B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAD17B1C82B653986EAAC65848A487C8 /* RDHCollectionViewGridLayout-dummy.m in Sources */,
-				1DB37BB201EB1FD829ACAA95BC0A5658 /* RDHCollectionViewGridLayout.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9D333E958A963A8CFED47052E92F3B16 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0A1D57B174FCBFB2ADBE36673817B2B /* Pods-CubeTimer-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F993A9AE91550BEDD9301FB5BFD488A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				76DE44F667E31E1FF5C2862FBECA143F /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
-				A3BEDD7A89FC745C55B876D39D00A593 /* PSTCollectionView-dummy.m in Sources */,
-				BC8BF9516D85561326D506C05AD0E152 /* PSTCollectionView.m in Sources */,
-				95B72481EBAF7762F308BB6CAF304F2A /* PSTCollectionViewCell.m in Sources */,
-				A83E427074277C31F7CFB3F960CBEC37 /* PSTCollectionViewController.m in Sources */,
-				CA54F90AB3A9406F0D3FC77607BEFAA1 /* PSTCollectionViewData.m in Sources */,
-				34135FBE1B92B3F7FCE413001AABE359 /* PSTCollectionViewFlowLayout.m in Sources */,
-				CD9CFFB10B5FC97292B7C27B43EF058C /* PSTCollectionViewItemKey.m in Sources */,
-				7ED92EA374269945F117F0838096F62B /* PSTCollectionViewLayout.m in Sources */,
-				B5F51C023D60F62C63B3A22FC55440E3 /* PSTCollectionViewUpdateItem.m in Sources */,
-				7FC3436E9BAF531F93A07C399172345F /* PSTGridLayoutInfo.m in Sources */,
-				6E5317C2BBBEA1F02F4777C44D3C8DDE /* PSTGridLayoutItem.m in Sources */,
-				567A38DA446852BF76EA99862EAAF09B /* PSTGridLayoutRow.m in Sources */,
-				B6313C369D0792694875EF97132BB3E3 /* PSTGridLayoutSection.m in Sources */,
+				A07D64B1ADBC55F1242EF300B383863C /* Pods-CubeTimer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		397F71867B783F6F9A46AE7F54AA1623 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PSTCollectionView;
-			target = D765F36A95F39E8D1443C5DA63D0FA80 /* PSTCollectionView */;
-			targetProxy = BE240F216175E7812067ED5C06E5AD53 /* PBXContainerItemProxy */;
-		};
-		8D5C4C0A567169D01BD1805BDB744B11 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RDHCollectionViewGridLayout;
-			target = 3A3940ED5F5F96B1734A6D81F08DFC4C /* RDHCollectionViewGridLayout */;
-			targetProxy = 6DA2CEC098C60EECE15E929031AAEE87 /* PBXContainerItemProxy */;
-		};
-		B542511D5A1B005159E7175E8BA102FE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PSTCollectionView;
-			target = D765F36A95F39E8D1443C5DA63D0FA80 /* PSTCollectionView */;
-			targetProxy = E71A45A41496B2C8C6095D3A7BA5E9E6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		2198C2AC140CE2DBED8659D7007225B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEEBB983EABC9CAB75DF1AE84FDDA25E /* Pods-CubeTimer.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		3DAA6041FACFD8E044ED11DF67F65865 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B3C5A3F3AC04E18B38BD68966A1A44 /* PSTCollectionView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PSTCollectionView/PSTCollectionView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		5C44B4C10F6241D78B849CABEB77E057 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C0F4592DAAFEF4788DEE3A09BA657AB /* RDHCollectionViewGridLayout.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/RDHCollectionViewGridLayout/RDHCollectionViewGridLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		74D284B759386ECD1B098DE51405DCED /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C0F4592DAAFEF4788DEE3A09BA657AB /* RDHCollectionViewGridLayout.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/RDHCollectionViewGridLayout/RDHCollectionViewGridLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		96B7EAEFD209E081E1A80B79B40CBA69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B3C5A3F3AC04E18B38BD68966A1A44 /* PSTCollectionView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PSTCollectionView/PSTCollectionView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		9759836F894A848C854960B4F5AF1366 /* Debug */ = {
+		C7268F589FACB28304F23DB006FBFACF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 469AB64B052CF15BD4B90663BF58F4AC /* Pods-CubeTimer.debug.xcconfig */;
 			buildSettings = {
@@ -675,6 +217,29 @@
 			};
 			name = Debug;
 		};
+		E61D061AF602AD9627883535D2947D18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEEBB983EABC9CAB75DF1AE84FDDA25E /* Pods-CubeTimer.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		ED4FC68AB2A4E06C718CFF338F6F156B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -727,29 +292,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9081E75B6E84B54ADC7E1ADEE92EFC81 /* Build configuration list for PBXNativeTarget "Pods-CubeTimer" */ = {
+		7942963BCDA97DD20A54C57418AAC198 /* Build configuration list for PBXNativeTarget "Pods-CubeTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9759836F894A848C854960B4F5AF1366 /* Debug */,
-				2198C2AC140CE2DBED8659D7007225B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AEDC4F505A84B0BB75F8B5145E7C99BB /* Build configuration list for PBXNativeTarget "PSTCollectionView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3DAA6041FACFD8E044ED11DF67F65865 /* Debug */,
-				96B7EAEFD209E081E1A80B79B40CBA69 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1A789D84F59B7AA5E4A77B44B6D7A5B /* Build configuration list for PBXNativeTarget "RDHCollectionViewGridLayout" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5C44B4C10F6241D78B849CABEB77E057 /* Debug */,
-				74D284B759386ECD1B098DE51405DCED /* Release */,
+				C7268F589FACB28304F23DB006FBFACF /* Debug */,
+				E61D061AF602AD9627883535D2947D18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

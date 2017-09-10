@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Time+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Time+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:CubeTimer.xcodeproj">
    </FileRef>
    <FileRef

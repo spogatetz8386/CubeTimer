@@ -1,12 +1,12 @@
 import UIKit
 
-class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class GridCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    let squares = ["Solve", "Times", "Settings", "aa", "bb"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("loaded")
         collectionView?.backgroundColor = UIColor.white
-        
         collectionView?.register(NavCell.self, forCellWithReuseIdentifier: identifier)
     }
     
@@ -18,7 +18,10 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! NavCell
+        
+        cell.nameLabel.text = squares[indexPath.row]
+        
         return cell
     }
     
@@ -28,6 +31,17 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
+        switch indexPath.row {
+        case 0:
+            let vc = TimerViewController()
+//            present(vc, animated: true, completion: {
+//                print("Segue completed")
+//            })
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+            //Never happens
+        }
     }
     
     
@@ -43,7 +57,6 @@ class NavCell: UICollectionViewCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "My Custom CollectionView"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -61,3 +74,5 @@ class NavCell: UICollectionViewCell {
     }
     
 }
+
+

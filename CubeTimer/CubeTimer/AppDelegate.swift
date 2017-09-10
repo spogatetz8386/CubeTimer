@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let layout = UICollectionViewFlowLayout()
-        let viewController = ViewController(collectionViewLayout: layout)
+        let viewController = GridCollectionViewController(collectionViewLayout: layout)
         window?.rootViewController = UINavigationController(rootViewController: viewController)
         return true
     }
@@ -49,4 +49,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
+
 
