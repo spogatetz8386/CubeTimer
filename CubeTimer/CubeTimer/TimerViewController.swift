@@ -88,6 +88,11 @@ class TimerView : UILabel{
     var mode = Mode.standby
     var timer : Timer?
     
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return (appDelegate.managedObjectContext)!
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupVisual()
@@ -113,8 +118,26 @@ class TimerView : UILabel{
         else if self.mode == Mode.solving{
             self.mode = Mode.standby
             self.timer?.invalidate()
+            self.saveTime(time: self.time)
             self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
             self.text = "Hold When Ready"
+        }
+    }
+    
+    func saveTime(time : CTime){
+        let context = getContext()
+        let entity = NSEntityDescription.entity(forEntityName: "Time", in: context)
+        let newTime = NSManagedObject(entity: entity!, insertInto: context)
+        
+        newTime.setValue(time.hundreths, forKey: "hundreth")
+        newTime.setValue(time.tenths, forKey: "tenths")
+        newTime.setValue(time.seconds, forKey: "seconds")
+        newTime.setValue(time.minutes, forKey: "minutes")
+        
+        do{
+            try context.save()
+        } catch{
+            print("Error saving time!")
         }
     }
     
@@ -128,6 +151,8 @@ class TimerView : UILabel{
 
 
     }
+    
+    let moc = (UIApplication.shared.delegate as! AppDelegate)
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

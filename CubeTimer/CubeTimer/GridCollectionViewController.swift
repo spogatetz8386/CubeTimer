@@ -34,9 +34,6 @@ class GridCollectionViewController: UICollectionViewController, UICollectionView
         switch indexPath.row {
         case 0:
             let vc = TimerViewController()
-//            present(vc, animated: true, completion: {
-//                print("Segue completed")
-//            })
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
