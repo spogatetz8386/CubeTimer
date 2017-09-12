@@ -22,6 +22,7 @@ class TimerViewController : UIViewController{
         self.createContraints()
         self.addSwipeGesture()
         self.navigationController?.navigationBar.isHidden = true
+        
     }
     
     func addSwipeGesture(){
@@ -119,6 +120,7 @@ class TimerView : UILabel{
             self.mode = Mode.standby
             self.timer?.invalidate()
             self.saveTime(time: self.time)
+            self.getTimes()
             self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
             self.text = "Hold When Ready"
         }
@@ -130,14 +132,24 @@ class TimerView : UILabel{
         let newTime = NSManagedObject(entity: entity!, insertInto: context)
         
         newTime.setValue(time.hundreths, forKey: "hundreth")
-        newTime.setValue(time.tenths, forKey: "tenths")
-        newTime.setValue(time.seconds, forKey: "seconds")
-        newTime.setValue(time.minutes, forKey: "minutes")
+        newTime.setValue(time.tenths, forKey: "tenth")
+        newTime.setValue(time.seconds, forKey: "second")
+        newTime.setValue(time.minutes, forKey: "minute")
         
         do{
             try context.save()
         } catch{
             print("Error saving time!")
+        }
+    }
+    
+    func getTimes(){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Time")
+        do{
+            let results = try getContext().fetch(request)
+            print("Results: \(results.count)")
+        } catch{
+            print("Error Fetching")
         }
     }
     
