@@ -12,9 +12,23 @@ import CoreData
 
 class PreviousTimesViewController : UITableViewController{
     let identifier = "timeCell"
+    let swipe = UISwipeGestureRecognizer()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupGesture()
         tableView.register(SavedTimeCell.self, forCellReuseIdentifier: identifier)
+    }
+    
+    func setupGesture(){
+        self.swipe.addTarget(self, action: #selector(PreviousTimesViewController.onSwipe))
+        self.swipe.direction = .right
+        self.swipe.numberOfTouchesRequired = 2
+        self.tableView.isUserInteractionEnabled = true
+        self.tableView.addGestureRecognizer(self.swipe)
+    }
+    
+    func onSwipe(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     func getContext() -> NSManagedObjectContext{
@@ -43,6 +57,10 @@ class PreviousTimesViewController : UITableViewController{
         return getTimes().count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SavedTimeCell
         let newTime = getTimes()[indexPath.row] as! NSManagedObject
@@ -59,7 +77,10 @@ class PreviousTimesViewController : UITableViewController{
 class SavedTimeCell : UITableViewCell{
     let timeLabel : UILabel = {
         let label = UILabel()
+        label.textAlignment = NSTextAlignment(rawValue: 1)!
+        label.font = UIFont(name: "Verdana", size: 48)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor(colorLiteralRed: 147/255, green: 188/255, blue: 255/255, alpha: 1)
         return label
     }()
     
@@ -68,8 +89,8 @@ class SavedTimeCell : UITableViewCell{
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(timeLabel)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : timeLabel]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : timeLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[v0]-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : timeLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : timeLabel]))
     }
     
     required init?(coder aDecoder: NSCoder) {

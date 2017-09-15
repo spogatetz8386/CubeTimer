@@ -28,8 +28,9 @@ class TimerViewController : UIViewController{
     func addSwipeGesture(){
         self.swipe.addTarget(self, action: #selector(TimerViewController.onSwipe))
         self.swipe.direction = .right
+        self.swipe.numberOfTouchesRequired = 2
         self.timer.isUserInteractionEnabled = true
-        self.timer.addGestureRecognizer(swipe)
+        self.timer.addGestureRecognizer(self.swipe)
     }
 
     func onSwipe(){
@@ -108,7 +109,7 @@ class TimerView : UILabel{
         self.text = "Hold to start"
         self.backgroundColor = UIColor(colorLiteralRed: 147/255, green: 188/255, blue: 255/255, alpha: 1)
         self.textAlignment = NSTextAlignment(rawValue: 1)!
-        self.font = UIFont(name: "Verdana", size: 36)
+        self.font = UIFont(name: "Verdana", size: 48)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
