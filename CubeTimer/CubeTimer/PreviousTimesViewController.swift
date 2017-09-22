@@ -13,10 +13,19 @@ import CoreData
 class PreviousTimesViewController : UITableViewController{
     let identifier = "timeCell"
     let swipe = UISwipeGestureRecognizer()
+    let noTimesView = { () -> UIView in 
+        let view = UIView()
+        return view
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupGesture()
+        self.navigationController?.navigationBar.isHidden = true
         tableView.register(SavedTimeCell.self, forCellReuseIdentifier: identifier)
+//        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : view]))
+//        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : view]))
     }
     
     func setupGesture(){
@@ -37,6 +46,7 @@ class PreviousTimesViewController : UITableViewController{
     }
     
     func getTimes() -> [Any]{
+        //returns all times
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Time")
         do{
             let results = try getContext().fetch(request)
@@ -49,33 +59,71 @@ class PreviousTimesViewController : UITableViewController{
         return ["Error"]
     }
     
+    //Table View Delegate Functions
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return getTimes().count
+        if getTimes().count > 0{
+            return getTimes().count
+        } else {
+            return 1
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete && getTimes().count > 0{
+            let context = getContext()
+            print(context)
+            for i in 0...self.getTimes().count - 1{
+                if i == indexPath.row{
+                    if getTimes().count > 1{
+                        self.tableView.deleteRows(at: [indexPath], with: .fade)
+                    } else {
+                        let indexSet = IndexSet(arrayLiteral: indexPath.section)
+                        //self.tableView.deleteSections(indexSet, with: .fade)
+                    }
+                    context.delete(self.getTimes()[i] as! NSManagedObject)
+                    do{
+                        try context.save()
+                    } catch {
+                        print("Error while removing")
+                    }
+                    
+                    tableView.reloadData()
+                }
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SavedTimeCell
-        let newTime = getTimes()[indexPath.row] as! NSManagedObject
-        let minute = newTime.value(forKey: "minute")
-        let second = newTime.value(forKey: "second")
-        let tenth = newTime.value(forKey: "tenth")
-        let hundreth = newTime.value(forKey: "hundreth")
-        let text = "\(minute ?? 0):\(second ?? 0).\(tenth ?? 0)\(hundreth ?? 0)"
-        cell.timeLabel.text = text
-        return cell
+        if getTimes().count > 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SavedTimeCell
+            let newTime = getTimes()[indexPath.row] as! NSManagedObject
+            let minute = newTime.value(forKey: "minute")
+            let second = newTime.value(forKey: "second")
+            let tenth = newTime.value(forKey: "tenth")
+            let hundreth = newTime.value(forKey: "hundreth")
+            let text = "\(minute ?? 0):\(second ?? 0).\(tenth ?? 0)\(hundreth ?? 0)"
+            cell.timeLabel.text = text
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SavedTimeCell
+            cell.timeLabel.text = "Nothing to see here"
+            return cell
+        }
     }
 }
 
 class SavedTimeCell : UITableViewCell{
     let timeLabel : UILabel = {
+        //create label
         let label = UILabel()
         label.textAlignment = NSTextAlignment(rawValue: 1)!
         label.font = UIFont(name: "Verdana", size: 48)

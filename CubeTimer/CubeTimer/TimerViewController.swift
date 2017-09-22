@@ -22,7 +22,6 @@ class TimerViewController : UIViewController{
         self.createContraints()
         self.addSwipeGesture()
         self.navigationController?.navigationBar.isHidden = true
-        
     }
     
     func addSwipeGesture(){
@@ -115,11 +114,13 @@ class TimerView : UILabel{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.mode == Mode.standby{
             self.text = "Release When Ready"
+            self.backgroundColor = .red
             self.mode = .holding
         }
         else if self.mode == Mode.solving{
             self.mode = Mode.standby
             self.timer?.invalidate()
+            self.backgroundColor = UIColor(colorLiteralRed: 147/255, green: 188/255, blue: 255/255, alpha: 1)
             self.saveTime(time: self.time)
             self.getTimes()
             self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
@@ -157,7 +158,7 @@ class TimerView : UILabel{
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.mode == Mode.holding{
             self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
-
+            self.backgroundColor = .green
             self.text = "0:0:0"
             self.mode = .solving
         }
@@ -171,3 +172,4 @@ class TimerView : UILabel{
         fatalError("init(coder:) has not been implemented")
     }
 }
+
