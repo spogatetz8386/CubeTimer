@@ -14,12 +14,15 @@ class TimerViewController : UIViewController{
     let timer = TimerView()
     var initialX : CGFloat = CGFloat()
     let swipe = UISwipeGestureRecognizer()
+    let scrambleGenerator = ScrambleGenerator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.view.addSubview(timer)
         self.createContraints()
+        self.view.addSubview(scrambleGenerator)
+        self.scrambleGenerator.nextScramble()
         self.addSwipeGesture()
         self.navigationController?.navigationBar.isHidden = true
     }
@@ -40,7 +43,8 @@ class TimerViewController : UIViewController{
     func createContraints(){
         self.timer.translatesAutoresizingMaskIntoConstraints = false
         let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[timer]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["timer" : timer])
-        let verticleContraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[timer]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: ["timer" : timer])
+
+        let verticleContraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[timer]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: ["timer" : timer, "gen" : scrambleGenerator])
         self.view.addConstraints(horizontalConstraints)
         self.view.addConstraints(verticleContraints)
     }
@@ -173,3 +177,23 @@ class TimerView : UILabel{
     }
 }
 
+class ScrambleGenerator : UILabel{
+    let validMoves = ["U", "D", "R", "L", "B", "F", "U'", "D'", "R'", "L'", "B'", "F'", "U2", "D2", "R2", "L2", "B2", "F2"]
+    var length : Int = 20
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func nextScramble(){
+        var scramble = [String]()
+        for i in 0...length - 1{
+            let random = arc4random_uniform(UInt32(Int32(validMoves.count)))
+            scramble.append(validMoves[Int(random)])
+        }
+        self.text = scramble.joined(separator: " ")
+    }
+}
