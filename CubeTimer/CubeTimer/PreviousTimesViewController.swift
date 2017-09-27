@@ -78,27 +78,21 @@ class PreviousTimesViewController : UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete && getTimes().count > 0{
-            let context = getContext()
-            print(context)
-            for i in 0...self.getTimes().count - 1{
-                if i == indexPath.row{
-                    if getTimes().count > 1{
-                        self.tableView.deleteRows(at: [indexPath], with: .fade)
-                    } else {
-                        let indexSet = IndexSet(arrayLiteral: indexPath.section)
-                        //self.tableView.deleteSections(indexSet, with: .fade)
-                    }
-                    context.delete(self.getTimes()[i] as! NSManagedObject)
-                    do{
-                        try context.save()
-                    } catch {
-                        print("Error while removing")
-                    }
-                    
-                    tableView.reloadData()
-                }
-            }
+        if editingStyle == .delete{
+            let times = getTimes() as! [NSManagedObject]
+            deleteTime(object: times[indexPath.row])
+            tableView.reloadData()
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    func deleteTime(object: NSManagedObject){
+        let context = getContext()
+        do {
+            context.delete(object)
+            try context.save()
+        } catch {
+            print("Error deleting time")
         }
     }
     

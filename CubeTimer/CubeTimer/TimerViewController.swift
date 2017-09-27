@@ -42,10 +42,15 @@ class TimerViewController : UIViewController{
     
     func createContraints(){
         self.timer.translatesAutoresizingMaskIntoConstraints = false
+        self.scrambleGenerator.translatesAutoresizingMaskIntoConstraints = false
         let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[timer]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["timer" : timer])
 
-        let verticleContraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[timer]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: ["timer" : timer, "gen" : scrambleGenerator])
+        let verticleContraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[timer]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["timer" : timer])
+        
+        //let genConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[scramble(30)]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
+        
         self.view.addConstraints(horizontalConstraints)
+        //self.view.addConstraints(genConstraints)
         self.view.addConstraints(verticleContraints)
     }
 }
@@ -182,6 +187,7 @@ class ScrambleGenerator : UILabel{
     var length : Int = 20
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -190,7 +196,7 @@ class ScrambleGenerator : UILabel{
     
     func nextScramble(){
         var scramble = [String]()
-        for i in 0...length - 1{
+        for _ in 0...length - 1{
             let random = arc4random_uniform(UInt32(Int32(validMoves.count)))
             scramble.append(validMoves[Int(random)])
         }
