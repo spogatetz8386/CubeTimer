@@ -61,12 +61,16 @@ class NavCell: UICollectionViewCell {
         return label
     }()
     
+    let imageView = UIImageView()
+    
     func setupViews() {
         backgroundColor = UIColor.red
+        self.imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(nameLabel)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+        
+//        addSubview(nameLabel)
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
     }
     
     required init?(coder aDecoder: NSCoder) {

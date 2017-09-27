@@ -20,8 +20,8 @@ class TimerViewController : UIViewController{
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.view.addSubview(timer)
-        self.createContraints()
         self.view.addSubview(scrambleGenerator)
+        self.createContraints()
         self.scrambleGenerator.nextScramble()
         self.addSwipeGesture()
         self.navigationController?.navigationBar.isHidden = true
@@ -47,10 +47,13 @@ class TimerViewController : UIViewController{
 
         let verticleContraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[timer]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["timer" : timer])
         
-        //let genConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[scramble(30)]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
+        let genConstraintsV = NSLayoutConstraint.constraints(withVisualFormat: "V:[scramble]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
+        
+        let genConstraintsH = NSLayoutConstraint.constraints(withVisualFormat: "H:|[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
         
         self.view.addConstraints(horizontalConstraints)
-        //self.view.addConstraints(genConstraints)
+        self.view.addConstraints(genConstraintsV)
+        self.view.addConstraints(genConstraintsH)
         self.view.addConstraints(verticleContraints)
     }
 }
@@ -133,6 +136,7 @@ class TimerView : UILabel{
             self.saveTime(time: self.time)
             self.getTimes()
             self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
+            
             self.text = "Hold When Ready"
         }
     }
