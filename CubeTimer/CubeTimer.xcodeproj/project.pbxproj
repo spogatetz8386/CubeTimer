@@ -13,12 +13,13 @@
 		211607901F60406E00E68552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2116078F1F60406E00E68552 /* Assets.xcassets */; };
 		211607931F60406E00E68552 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211607911F60406E00E68552 /* LaunchScreen.storyboard */; };
 		21F948F61F66DA8C000BE3C5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F948F51F66DA8C000BE3C5 /* CoreData.framework */; };
-		A115EEDDFBFACF1E8CAA9D6E /* libPods-CubeTimer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE47D2ADE72F9E27AAAD60B /* libPods-CubeTimer.a */; };
+		878B6E35A5CEB8991324A97D /* Pods_CubeTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B11D7E6D8F4BE247B8A6E6 /* Pods_CubeTimer.framework */; };
 		D26361B61F65003E00B8FA77 /* PreviousTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26361B51F65003E00B8FA77 /* PreviousTimesViewController.swift */; };
 		D2E37EE31F639F850052D06A /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E37EE21F639F850052D06A /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B11D7E6D8F4BE247B8A6E6 /* Pods_CubeTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CubeTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211607821F60406E00E68552 /* CubeTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		211607851F60406E00E68552 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		211607871F60406E00E68552 /* GridCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +29,6 @@
 		211607941F60406E00E68552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21F948F51F66DA8C000BE3C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5071CFFC72E9CDE02AAD59DE /* Pods-CubeTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer.debug.xcconfig"; sourceTree = "<group>"; };
-		7FE47D2ADE72F9E27AAAD60B /* libPods-CubeTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CubeTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		960776E1AC5EDBD167939799 /* Pods-CubeTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer.release.xcconfig"; sourceTree = "<group>"; };
 		D26361B51F65003E00B8FA77 /* PreviousTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousTimesViewController.swift; sourceTree = "<group>"; };
 		D2E37EE21F639F850052D06A /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F948F61F66DA8C000BE3C5 /* CoreData.framework in Frameworks */,
-				A115EEDDFBFACF1E8CAA9D6E /* libPods-CubeTimer.a in Frameworks */,
+				878B6E35A5CEB8991324A97D /* Pods_CubeTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				21F948F51F66DA8C000BE3C5 /* CoreData.framework */,
-				7FE47D2ADE72F9E27AAAD60B /* libPods-CubeTimer.a */,
+				00B11D7E6D8F4BE247B8A6E6 /* Pods_CubeTimer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,9 +174,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BSGridCollectionViewLayout/BSGridCollectionViewLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSGridCollectionViewLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -204,13 +207,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CubeTimer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

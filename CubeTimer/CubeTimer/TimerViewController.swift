@@ -20,7 +20,7 @@ class TimerViewController : UIViewController{
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.view.addSubview(timer)
-        self.view.addSubview(scrambleGenerator)
+        //self.view.addSubview(scrambleGenerator)
         self.createContraints()
         self.scrambleGenerator.nextScramble()
         self.addSwipeGesture()
@@ -47,13 +47,13 @@ class TimerViewController : UIViewController{
 
         let verticleContraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[timer]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["timer" : timer])
         
-        let genConstraintsV = NSLayoutConstraint.constraints(withVisualFormat: "V:[scramble]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
+        //let genConstraintsV = NSLayoutConstraint.constraints(withVisualFormat: "V:[scramble]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
         
-        let genConstraintsH = NSLayoutConstraint.constraints(withVisualFormat: "H:|[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
+        //let genConstraintsH = NSLayoutConstraint.constraints(withVisualFormat: "H:|[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
         
         self.view.addConstraints(horizontalConstraints)
-        self.view.addConstraints(genConstraintsV)
-        self.view.addConstraints(genConstraintsH)
+        //self.view.addConstraints(genConstraintsV)
+        //self.view.addConstraints(genConstraintsH)
         self.view.addConstraints(verticleContraints)
     }
 }
@@ -99,6 +99,7 @@ class CTime {
 class TimerView : UILabel{
     var time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
     var mode = Mode.standby
+    let scrambleGenerator = ScrambleGenerator()
     var timer : Timer?
     
     func getContext () -> NSManagedObjectContext {
@@ -121,6 +122,17 @@ class TimerView : UILabel{
         self.backgroundColor = UIColor(colorLiteralRed: 147/255, green: 188/255, blue: 255/255, alpha: 1)
         self.textAlignment = NSTextAlignment(rawValue: 1)!
         self.font = UIFont(name: "Verdana", size: 48)
+        
+        self.scrambleGenerator.isUserInteractionEnabled = true
+        self.scrambleGenerator.translatesAutoresizingMaskIntoConstraints = false
+        self.scrambleGenerator.textAlignment = NSTextAlignment(rawValue: 1)!
+        self.scrambleGenerator.nextScramble()
+        self.addSubview(scrambleGenerator)
+        
+        let contraintsV = NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : self.scrambleGenerator])
+        let contraintsH = NSLayoutConstraint.constraints(withVisualFormat: "H:|[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : self.scrambleGenerator])
+        self.addConstraints(contraintsV)
+        self.addConstraints(contraintsH)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -131,6 +143,7 @@ class TimerView : UILabel{
         }
         else if self.mode == Mode.solving{
             self.mode = Mode.standby
+            self.scrambleGenerator.nextScramble()
             self.timer?.invalidate()
             self.backgroundColor = UIColor(colorLiteralRed: 147/255, green: 188/255, blue: 255/255, alpha: 1)
             self.saveTime(time: self.time)

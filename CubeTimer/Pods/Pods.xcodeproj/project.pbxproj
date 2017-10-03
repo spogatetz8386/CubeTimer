@@ -7,49 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33900F3F9D4C5124C0B7826F89E7F2A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		A07D64B1ADBC55F1242EF300B383863C /* Pods-CubeTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AA52CFFE3A996D82F5DDE5F62D6DB7 /* Pods-CubeTimer-dummy.m */; };
+		94A060A00B609A1879D6157755893AA1 /* Pods-CubeTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 686371F9A9438184FB0942ACA7D53113 /* Pods-CubeTimer-dummy.m */; };
+		B8B6052673B5252274DFE12DF7F8F054 /* Pods-CubeTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA50644D8C8593E781F5CDEBA641B37 /* Pods-CubeTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE394EA4FF7B8461D88E7D80FBB1106E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		469AB64B052CF15BD4B90663BF58F4AC /* Pods-CubeTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CubeTimer.debug.xcconfig"; sourceTree = "<group>"; };
-		5EE4D538C86343FFAE18800A0C3F9EEF /* libPods-CubeTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CubeTimer.a"; path = "libPods-CubeTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		891DA8F075C3C81C8D141EE5533284AE /* Pods-CubeTimer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CubeTimer-resources.sh"; sourceTree = "<group>"; };
+		3DA03E03112D66B11145C87EA2509B3C /* Pods-CubeTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CubeTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4601E74411E35E5AEA500DA69355A33F /* Pods-CubeTimer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CubeTimer-frameworks.sh"; sourceTree = "<group>"; };
+		47FD2E1B6EA3B3959D5D4085CFAC7FB3 /* Pods-CubeTimer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CubeTimer-resources.sh"; sourceTree = "<group>"; };
+		532112BA94298D36A13E7A7BEB63811A /* Pods-CubeTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CubeTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		686371F9A9438184FB0942ACA7D53113 /* Pods-CubeTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CubeTimer-dummy.m"; sourceTree = "<group>"; };
+		7B0AF924AC4EFA6DFD308A8F37CFB516 /* Pods-CubeTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CubeTimer.release.xcconfig"; sourceTree = "<group>"; };
+		8A4F55AB8FF2C13724A47279EF773A07 /* Pods-CubeTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CubeTimer.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AC465993AB4053140A03F58F869C45C /* Pods-CubeTimer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CubeTimer-frameworks.sh"; sourceTree = "<group>"; };
-		B77C35A3B932179A42ECB2414046CEB7 /* Pods-CubeTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CubeTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BEEBB983EABC9CAB75DF1AE84FDDA25E /* Pods-CubeTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CubeTimer.release.xcconfig"; sourceTree = "<group>"; };
-		C7AA52CFFE3A996D82F5DDE5F62D6DB7 /* Pods-CubeTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CubeTimer-dummy.m"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CD33E9A1324531B4247949AE4B521701 /* Pods-CubeTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CubeTimer-acknowledgements.plist"; sourceTree = "<group>"; };
+		93E92561BC945A13F80D2FA5792ED8F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D303755150C4C68442B5420747ACE6 /* Pods-CubeTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CubeTimer-acknowledgements.plist"; sourceTree = "<group>"; };
+		D8ECA101296F3D329EE3F7DA43F161AE /* Pods_CubeTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CubeTimer.framework; path = "Pods-CubeTimer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA50644D8C8593E781F5CDEBA641B37 /* Pods-CubeTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CubeTimer-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		15A6CF7408DFBD009C85ED60FFCBB233 /* Frameworks */ = {
+		D7F618FE65189C5E31F65D32623D223E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33900F3F9D4C5124C0B7826F89E7F2A4 /* Foundation.framework in Frameworks */,
+				FE394EA4FF7B8461D88E7D80FBB1106E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B5DBD5E82380F69E26DE073ECDF230E /* Targets Support Files */ = {
+		6755259A867F2E5C254A8C0C5F592299 /* Pods-CubeTimer */ = {
 			isa = PBXGroup;
 			children = (
-				D5B9C5211499E1A874CE0B22B870EB5B /* Pods-CubeTimer */,
+				93E92561BC945A13F80D2FA5792ED8F1 /* Info.plist */,
+				8A4F55AB8FF2C13724A47279EF773A07 /* Pods-CubeTimer.modulemap */,
+				3DA03E03112D66B11145C87EA2509B3C /* Pods-CubeTimer-acknowledgements.markdown */,
+				D4D303755150C4C68442B5420747ACE6 /* Pods-CubeTimer-acknowledgements.plist */,
+				686371F9A9438184FB0942ACA7D53113 /* Pods-CubeTimer-dummy.m */,
+				4601E74411E35E5AEA500DA69355A33F /* Pods-CubeTimer-frameworks.sh */,
+				47FD2E1B6EA3B3959D5D4085CFAC7FB3 /* Pods-CubeTimer-resources.sh */,
+				ECA50644D8C8593E781F5CDEBA641B37 /* Pods-CubeTimer-umbrella.h */,
+				532112BA94298D36A13E7A7BEB63811A /* Pods-CubeTimer.debug.xcconfig */,
+				7B0AF924AC4EFA6DFD308A8F37CFB516 /* Pods-CubeTimer.release.xcconfig */,
 			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
-			);
-			name = iOS;
+			name = "Pods-CubeTimer";
+			path = "Target Support Files/Pods-CubeTimer";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -57,51 +63,64 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				9C633FA88D60F8BBA1BE93215A03AC15 /* Products */,
-				6B5DBD5E82380F69E26DE073ECDF230E /* Targets Support Files */,
+				C9D438DAFE9598A4FA7CFEC11BA588A8 /* Products */,
+				CDFF60136B04A92622BF65D063F1A18B /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		9C633FA88D60F8BBA1BE93215A03AC15 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5EE4D538C86343FFAE18800A0C3F9EEF /* libPods-CubeTimer.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D5B9C5211499E1A874CE0B22B870EB5B /* Pods-CubeTimer */ = {
+		C9D438DAFE9598A4FA7CFEC11BA588A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B77C35A3B932179A42ECB2414046CEB7 /* Pods-CubeTimer-acknowledgements.markdown */,
-				CD33E9A1324531B4247949AE4B521701 /* Pods-CubeTimer-acknowledgements.plist */,
-				C7AA52CFFE3A996D82F5DDE5F62D6DB7 /* Pods-CubeTimer-dummy.m */,
-				9AC465993AB4053140A03F58F869C45C /* Pods-CubeTimer-frameworks.sh */,
-				891DA8F075C3C81C8D141EE5533284AE /* Pods-CubeTimer-resources.sh */,
-				469AB64B052CF15BD4B90663BF58F4AC /* Pods-CubeTimer.debug.xcconfig */,
-				BEEBB983EABC9CAB75DF1AE84FDDA25E /* Pods-CubeTimer.release.xcconfig */,
+				D8ECA101296F3D329EE3F7DA43F161AE /* Pods_CubeTimer.framework */,
 			);
-			name = "Pods-CubeTimer";
-			path = "Target Support Files/Pods-CubeTimer";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDFF60136B04A92622BF65D063F1A18B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6755259A867F2E5C254A8C0C5F592299 /* Pods-CubeTimer */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D1C9B47C5F82E88A912C1D2E4E7B4D4A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B6052673B5252274DFE12DF7F8F054 /* Pods-CubeTimer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		875330EF4696CE39376A27263280F3A8 /* Pods-CubeTimer */ = {
+		585A910E1F8A55B39BA0FAE1E4429028 /* Pods-CubeTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7942963BCDA97DD20A54C57418AAC198 /* Build configuration list for PBXNativeTarget "Pods-CubeTimer" */;
+			buildConfigurationList = 661D174DD2194427E5049378801D58D8 /* Build configuration list for PBXNativeTarget "Pods-CubeTimer" */;
 			buildPhases = (
-				855A4025737F2173925E75688437223B /* Sources */,
-				15A6CF7408DFBD009C85ED60FFCBB233 /* Frameworks */,
+				4D9DD41E80243D4AF10D6F30C2D3A8BD /* Sources */,
+				D7F618FE65189C5E31F65D32623D223E /* Frameworks */,
+				D1C9B47C5F82E88A912C1D2E4E7B4D4A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -109,8 +128,8 @@
 			);
 			name = "Pods-CubeTimer";
 			productName = "Pods-CubeTimer";
-			productReference = 5EE4D538C86343FFAE18800A0C3F9EEF /* libPods-CubeTimer.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = D8ECA101296F3D329EE3F7DA43F161AE /* Pods_CubeTimer.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -118,7 +137,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -129,55 +148,69 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9C633FA88D60F8BBA1BE93215A03AC15 /* Products */;
+			productRefGroup = C9D438DAFE9598A4FA7CFEC11BA588A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				875330EF4696CE39376A27263280F3A8 /* Pods-CubeTimer */,
+				585A910E1F8A55B39BA0FAE1E4429028 /* Pods-CubeTimer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		855A4025737F2173925E75688437223B /* Sources */ = {
+		4D9DD41E80243D4AF10D6F30C2D3A8BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A07D64B1ADBC55F1242EF300B383863C /* Pods-CubeTimer-dummy.m in Sources */,
+				94A060A00B609A1879D6157755893AA1 /* Pods-CubeTimer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C7268F589FACB28304F23DB006FBFACF /* Debug */ = {
+		88F2202B7AEB9B4109408C2DEA3F3613 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 469AB64B052CF15BD4B90663BF58F4AC /* Pods-CubeTimer.debug.xcconfig */;
+			baseConfigurationReference = 7B0AF924AC4EFA6DFD308A8F37CFB516 /* Pods-CubeTimer.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				INFOPLIST_FILE = "Target Support Files/Pods-CubeTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MODULEMAP_FILE = "Target Support Files/Pods-CubeTimer/Pods-CubeTimer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_CubeTimer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */ = {
+		9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -185,10 +218,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -209,42 +245,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		E61D061AF602AD9627883535D2947D18 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEEBB983EABC9CAB75DF1AE84FDDA25E /* Pods-CubeTimer.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		ED4FC68AB2A4E06C718CFF338F6F156B /* Release */ = {
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -252,10 +267,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -272,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -280,23 +298,59 @@
 			};
 			name = Release;
 		};
+		EEFA4498EE7A13B39F41072C3E95EDFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 532112BA94298D36A13E7A7BEB63811A /* Pods-CubeTimer.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CubeTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CubeTimer/Pods-CubeTimer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CubeTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */,
-				ED4FC68AB2A4E06C718CFF338F6F156B /* Release */,
+				9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7942963BCDA97DD20A54C57418AAC198 /* Build configuration list for PBXNativeTarget "Pods-CubeTimer" */ = {
+		661D174DD2194427E5049378801D58D8 /* Build configuration list for PBXNativeTarget "Pods-CubeTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C7268F589FACB28304F23DB006FBFACF /* Debug */,
-				E61D061AF602AD9627883535D2947D18 /* Release */,
+				EEFA4498EE7A13B39F41072C3E95EDFB /* Debug */,
+				88F2202B7AEB9B4109408C2DEA3F3613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
