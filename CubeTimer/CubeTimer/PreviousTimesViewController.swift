@@ -102,6 +102,7 @@ class PreviousTimesViewController : UITableViewController{
             let newTime = getTimes()[indexPath.row] as! NSManagedObject
             let minute = newTime.value(forKey: "minute")
             let second = newTime.value(forKey: "second")
+            cell.timeLabel.font = UIFont(name: "Verdana", size: 48)
             let tenth = newTime.value(forKey: "tenth")
             let hundreth = newTime.value(forKey: "hundreth")
             let text = "\(minute ?? 0):\(second ?? 0).\(tenth ?? 0)\(hundreth ?? 0)"
@@ -110,6 +111,7 @@ class PreviousTimesViewController : UITableViewController{
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SavedTimeCell
             cell.timeLabel.text = "Nothing to see here"
+            cell.timeLabel.font = UIFont(name: "Verdana", size: 24)
             return cell
         }
     }
@@ -139,24 +141,3 @@ class SavedTimeCell : UITableViewCell{
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

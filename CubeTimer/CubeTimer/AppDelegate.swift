@@ -72,6 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         let viewController = GridCollectionViewController(collectionViewLayout: layout)
         window?.rootViewController = UINavigationController(rootViewController: viewController)
         return true

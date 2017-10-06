@@ -1,17 +1,18 @@
 import UIKit
 
 class GridCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    let squares = ["Solve", "Times", "Settings", "aa", "bb"]
+    let squares = ["Solve", "Times", "Settings", "aa"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("loaded")
         collectionView?.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.isHidden = true
         collectionView?.register(NavCell.self, forCellWithReuseIdentifier: identifier)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     let identifier = "identifier"
@@ -26,7 +27,10 @@ class GridCollectionViewController: UICollectionViewController, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: UIScreen.main.bounds.width / 2 - 10, height: UIScreen.main.bounds.height / 2 - 10)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -69,6 +73,7 @@ class NavCell: UICollectionViewCell {
         
         
         addSubview(nameLabel)
+        nameLabel.textAlignment = NSTextAlignment(rawValue: 1)!
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
     }

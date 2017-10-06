@@ -18,14 +18,16 @@ class TimerViewController : UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+
         self.view.backgroundColor = .white
         self.view.addSubview(timer)
         //self.view.addSubview(scrambleGenerator)
         self.createContraints()
         self.scrambleGenerator.nextScramble()
         self.addSwipeGesture()
-        self.navigationController?.navigationBar.isHidden = true
     }
+
     
     func addSwipeGesture(){
         self.swipe.addTarget(self, action: #selector(TimerViewController.onSwipe))
@@ -117,8 +119,14 @@ class TimerView : UILabel{
         self.text = self.time.getTimeString()
     }
     
+    
+    
     private func setupVisual(){
-        self.text = "Hold to start"
+        if UIDevice.current.orientation == UIDeviceOrientation.portrait || UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown{
+            self.text = "Hold"
+        } else {
+            self.text = "Hold to Start"
+        }
         self.backgroundColor = UIColor(colorLiteralRed: 147/255, green: 188/255, blue: 255/255, alpha: 1)
         self.textAlignment = NSTextAlignment(rawValue: 1)!
         self.font = UIFont(name: "Verdana", size: 48)
@@ -127,17 +135,22 @@ class TimerView : UILabel{
         self.scrambleGenerator.translatesAutoresizingMaskIntoConstraints = false
         self.scrambleGenerator.textAlignment = NSTextAlignment(rawValue: 1)!
         self.scrambleGenerator.nextScramble()
+        self.scrambleGenerator.numberOfLines = 2
         self.addSubview(scrambleGenerator)
         
-        let contraintsV = NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : self.scrambleGenerator])
-        let contraintsH = NSLayoutConstraint.constraints(withVisualFormat: "H:|[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : self.scrambleGenerator])
+        let contraintsV = NSLayoutConstraint.constraints(withVisualFormat: "V:|-150-[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : self.scrambleGenerator])
+        let contraintsH = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[scramble]-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : self.scrambleGenerator])
         self.addConstraints(contraintsV)
         self.addConstraints(contraintsH)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.mode == Mode.standby{
-            self.text = "Release When Ready"
+            if UIDevice.current.orientation == UIDeviceOrientation.portrait || UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown{
+                self.text = "Release"
+            } else {
+                self.text = "Release When Ready"
+            }
             self.backgroundColor = .red
             self.mode = .holding
         }
@@ -149,8 +162,11 @@ class TimerView : UILabel{
             self.saveTime(time: self.time)
             self.getTimes()
             self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
-            
-            self.text = "Hold When Ready"
+            if UIDevice.current.orientation == UIDeviceOrientation.portrait || UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown{
+                self.text = "Hold"
+            } else {
+                self.text = "Hold to Start"
+            }
         }
     }
     
