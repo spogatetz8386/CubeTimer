@@ -42,6 +42,9 @@ class GridCollectionViewController: UICollectionViewController, UICollectionView
         case 1:
             let vc = PreviousTimesViewController()
             navigationController?.pushViewController(vc, animated: true)
+        case 2:
+            let vc = SettingsController()
+            navigationController?.pushViewController(vc, animated: true)
         default:
             break
             //Never happens

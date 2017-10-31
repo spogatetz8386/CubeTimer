@@ -12,6 +12,8 @@
 		2116078E1F60406E00E68552 /* CubeTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2116078C1F60406E00E68552 /* CubeTimer.xcdatamodeld */; };
 		211607901F60406E00E68552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2116078F1F60406E00E68552 /* Assets.xcassets */; };
 		211607931F60406E00E68552 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211607911F60406E00E68552 /* LaunchScreen.storyboard */; };
+		21C124061F9F8436003CE2AF /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C124051F9F8436003CE2AF /* ToggleButton.swift */; };
+		21C124081F9F84C1003CE2AF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C124071F9F84C1003CE2AF /* SettingsViewController.swift */; };
 		21F948F61F66DA8C000BE3C5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F948F51F66DA8C000BE3C5 /* CoreData.framework */; };
 		878B6E35A5CEB8991324A97D /* Pods_CubeTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B11D7E6D8F4BE247B8A6E6 /* Pods_CubeTimer.framework */; };
 		D26361B61F65003E00B8FA77 /* PreviousTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26361B51F65003E00B8FA77 /* PreviousTimesViewController.swift */; };
@@ -27,6 +29,8 @@
 		2116078F1F60406E00E68552 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211607921F60406E00E68552 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		211607941F60406E00E68552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21C124051F9F8436003CE2AF /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		21C124071F9F84C1003CE2AF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		21F948F51F66DA8C000BE3C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5071CFFC72E9CDE02AAD59DE /* Pods-CubeTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		960776E1AC5EDBD167939799 /* Pods-CubeTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubeTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CubeTimer/Pods-CubeTimer.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		211607841F60406E00E68552 /* CubeTimer */ = {
 			isa = PBXGroup;
 			children = (
+				21C124051F9F8436003CE2AF /* ToggleButton.swift */,
+				21C124071F9F84C1003CE2AF /* SettingsViewController.swift */,
 				211607851F60406E00E68552 /* AppDelegate.swift */,
 				211607871F60406E00E68552 /* GridCollectionViewController.swift */,
 				D2E37EE21F639F850052D06A /* TimerViewController.swift */,
@@ -227,6 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2E37EE31F639F850052D06A /* TimerViewController.swift in Sources */,
+				21C124061F9F8436003CE2AF /* ToggleButton.swift in Sources */,
+				21C124081F9F84C1003CE2AF /* SettingsViewController.swift in Sources */,
 				211607881F60406E00E68552 /* GridCollectionViewController.swift in Sources */,
 				2116078E1F60406E00E68552 /* CubeTimer.xcdatamodeld in Sources */,
 				211607861F60406E00E68552 /* AppDelegate.swift in Sources */,

@@ -28,7 +28,6 @@ class TimerViewController : UIViewController{
         self.addSwipeGesture()
     }
 
-    
     func addSwipeGesture(){
         self.swipe.addTarget(self, action: #selector(TimerViewController.onSwipe))
         self.swipe.direction = .right
@@ -49,13 +48,7 @@ class TimerViewController : UIViewController{
 
         let verticleContraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[timer]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["timer" : timer])
         
-        //let genConstraintsV = NSLayoutConstraint.constraints(withVisualFormat: "V:[scramble]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
-        
-        //let genConstraintsH = NSLayoutConstraint.constraints(withVisualFormat: "H:|[scramble]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["scramble" : scrambleGenerator])
-        
         self.view.addConstraints(horizontalConstraints)
-        //self.view.addConstraints(genConstraintsV)
-        //self.view.addConstraints(genConstraintsH)
         self.view.addConstraints(verticleContraints)
     }
 }
@@ -78,7 +71,7 @@ class CTime {
     }
     
     func increment(){
-        self.hundreths += 1
+        self.hundreths += 10
         if hundreths == 10{
             self.hundreths = 0
             self.tenths += 1
@@ -90,6 +83,13 @@ class CTime {
         if self.seconds == 60{
             self.seconds = 0
             self.minutes += 1
+        }
+    }
+    
+    func incrementInspection(){
+        for i in 0...9{
+            print(i)
+            self.increment()
         }
     }
     
@@ -119,7 +119,18 @@ class TimerView : UILabel{
         self.text = self.time.getTimeString()
     }
     
-    
+    func inspectionTimer(){
+        self.time.incrementInspection()
+        self.text = String(self.time.seconds)
+        if(self.text == "15"){
+            self.timer?.invalidate()
+            self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
+            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
+            self.mode = .solving
+            self.backgroundColor = .green
+            self.text = "0:0:0"
+        }
+    }
     
     private func setupVisual(){
         if UIDevice.current.orientation == UIDeviceOrientation.portrait || UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown{
@@ -168,6 +179,14 @@ class TimerView : UILabel{
                 self.text = "Hold to Start"
             }
         }
+        else if self.mode == .inspecting{
+            self.timer?.invalidate()
+            self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
+            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
+            self.mode = .solving
+            self.backgroundColor = .green
+            self.text = "0:0:0"
+        }
     }
     
     func saveTime(time : CTime){
@@ -198,13 +217,18 @@ class TimerView : UILabel{
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if self.mode == Mode.holding{
-            self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
+        if self.mode == Mode.holding && Setting.current.doesUseInspectionTime == false{
+            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
             self.backgroundColor = .green
             self.text = "0:0:0"
             self.mode = .solving
         }
-
+        else if self.mode == Mode.holding && Setting.current.doesUseInspectionTime{
+            self.mode = .inspecting
+            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerView.inspectionTimer), userInfo: nil, repeats: true)
+            self.text = "0"
+            print("Start Inspecting")
+        }
 
     }
     
