@@ -18,6 +18,7 @@ class TimerViewController : UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(CTime.timeFromSeconds(input: 1234.27).getTimeString())
         self.navigationController?.navigationBar.isHidden = true
 
         self.view.backgroundColor = .white
@@ -70,6 +71,16 @@ class CTime {
         self.minutes = minutes
     }
     
+    static func timeFromSeconds(input: Double) -> CTime{
+        var timeInSeconds = input
+        let minutes = Int(timeInSeconds / 60)
+        timeInSeconds = timeInSeconds.truncatingRemainder(dividingBy: 60.0)
+        let seconds = Int(timeInSeconds)
+        let tenths = Int(timeInSeconds.truncatingRemainder(dividingBy: 1.0) * 10)
+        let hundreths = Int(round(timeInSeconds.truncatingRemainder(dividingBy: 0.1) * 100))
+        return CTime(hundreths: hundreths, tenths: tenths, seconds: seconds, minutes: minutes)
+    }
+    
     func increment(){
         self.hundreths += 10
         if hundreths == 10{
@@ -99,6 +110,8 @@ class CTime {
 }
 
 class TimerView : UILabel{
+
+    var initialTime : Double?
     var time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
     var mode = Mode.standby
     let scrambleGenerator = ScrambleGenerator()
@@ -180,13 +193,23 @@ class TimerView : UILabel{
             }
         }
         else if self.mode == .inspecting{
-            self.timer?.invalidate()
+            let link = CADisplayLink(target: self, selector: #selector(startTiming))
+
+            link.add(to: .main, forMode: .defaultRunLoopMode)
+            link.preferredFramesPerSecond = 7
             self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
             self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
             self.mode = .solving
             self.backgroundColor = .green
             self.text = "0:0:0"
         }
+    }
+    
+    func startTiming(link: CADisplayLink){
+        if(self.initialTime == nil){
+            self.initialTime = link.targetTimestamp
+        }
+        self.text = CTime.timeFromSeconds(input: link.timestamp - self.initialTime!).getTimeString()
     }
     
     func saveTime(time : CTime){

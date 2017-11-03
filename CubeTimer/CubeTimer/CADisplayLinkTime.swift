@@ -20,6 +20,6 @@ class CADisplayLinkTime{
         if(initialTime == nil){
             self.initialTime = link.timestamp
         }
-        print(link.targetTimestamp - initialTime!)
+        //print(link.targetTimestamp - initialTime!)
     }
 }
