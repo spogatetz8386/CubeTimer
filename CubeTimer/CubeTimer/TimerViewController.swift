@@ -111,6 +111,8 @@ class CTime {
 
 class TimerView : UILabel{
 
+    var link = CADisplayLink()
+
     var initialTime : Double?
     var time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
     var mode = Mode.standby
@@ -181,7 +183,7 @@ class TimerView : UILabel{
         else if self.mode == Mode.solving{
             self.mode = Mode.standby
             self.scrambleGenerator.nextScramble()
-            self.timer?.invalidate()
+            self.link.invalidate()
             self.backgroundColor = UIColor(colorLiteralRed: 147/255, green: 188/255, blue: 255/255, alpha: 1)
             self.saveTime(time: self.time)
             self.getTimes()
@@ -193,12 +195,9 @@ class TimerView : UILabel{
             }
         }
         else if self.mode == .inspecting{
-            let link = CADisplayLink(target: self, selector: #selector(startTiming))
-
+            link = CADisplayLink(target: self, selector: #selector(startTiming))
             link.add(to: .main, forMode: .defaultRunLoopMode)
-            link.preferredFramesPerSecond = 7
             self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
-            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
             self.mode = .solving
             self.backgroundColor = .green
             self.text = "0:0:0"
@@ -209,7 +208,11 @@ class TimerView : UILabel{
         if(self.initialTime == nil){
             self.initialTime = link.targetTimestamp
         }
-        self.text = CTime.timeFromSeconds(input: link.timestamp - self.initialTime!).getTimeString()
+        UIView.animate(withDuration: 0.2) {
+            print(CTime.timeFromSeconds(input: link.timestamp - self.initialTime!).getTimeString())
+            self.text = CTime.timeFromSeconds(input: link.timestamp - self.initialTime!).getTimeString()
+
+        }
     }
     
     func saveTime(time : CTime){
