@@ -139,9 +139,10 @@ class TimerView : UILabel{
         self.text = String(self.time.seconds)
         if(self.text == "15"){
             self.timer?.invalidate()
-            self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
-            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
             self.mode = .solving
+            link = CADisplayLink(target: self, selector: #selector(startTiming))
+            link.add(to: .main, forMode: .defaultRunLoopMode)
+            self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
             self.backgroundColor = .green
             self.text = "0:0:0"
         }
@@ -184,6 +185,7 @@ class TimerView : UILabel{
             self.mode = Mode.standby
             self.scrambleGenerator.nextScramble()
             self.link.invalidate()
+            self.initialTime = nil
             self.backgroundColor = UIColor(colorLiteralRed: 147/255, green: 188/255, blue: 255/255, alpha: 1)
             self.saveTime(time: self.time)
             self.getTimes()
@@ -196,6 +198,7 @@ class TimerView : UILabel{
         }
         else if self.mode == .inspecting{
             link = CADisplayLink(target: self, selector: #selector(startTiming))
+            self.timer?.invalidate()
             link.add(to: .main, forMode: .defaultRunLoopMode)
             self.time = CTime(hundreths: 0, tenths: 0, seconds: 0, minutes: 0)
             self.mode = .solving
@@ -211,7 +214,7 @@ class TimerView : UILabel{
         UIView.animate(withDuration: 0.2) {
             print(CTime.timeFromSeconds(input: link.timestamp - self.initialTime!).getTimeString())
             self.text = CTime.timeFromSeconds(input: link.timestamp - self.initialTime!).getTimeString()
-
+            self.time = CTime.timeFromSeconds(input: link.timestamp - self.initialTime!)
         }
     }
     
@@ -244,7 +247,8 @@ class TimerView : UILabel{
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.mode == Mode.holding && Setting.current.doesUseInspectionTime == false{
-            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimerView.onTick), userInfo: nil, repeats: true)
+            link = CADisplayLink(target: self, selector: #selector(startTiming))
+            link.add(to: .main, forMode: .defaultRunLoopMode)
             self.backgroundColor = .green
             self.text = "0:0:0"
             self.mode = .solving

@@ -46,6 +46,7 @@ class ToggleButton: UIView {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //move circleView
         if(!active){
+            print("set to true")
             self.active = true
             Setting.current.doesUseInspectionTime = true //Possibly erase
             UIView.animate(withDuration: TimeInterval(duration)) {
@@ -55,6 +56,7 @@ class ToggleButton: UIView {
  
         } else {
             self.active = false
+            print("set to false")
             Setting.current.doesUseInspectionTime = false //possibly delete
             UIView.animate(withDuration: TimeInterval(duration)) {
                 self.circleView.center = CGPoint(x: CGFloat(self.wConst * 2) + self.circleView.frame.width / 2, y: self.frame.height / 2)
