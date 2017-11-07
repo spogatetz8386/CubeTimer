@@ -4,7 +4,6 @@ class GridCollectionViewController: UICollectionViewController, UICollectionView
     let squares = ["Solve", "Times", "Settings", "aa"]
     
     override func viewDidLoad() {
-        let link = CADisplayLinkTime()
         super.viewDidLoad()
         print("loaded")
         collectionView?.backgroundColor = UIColor.white

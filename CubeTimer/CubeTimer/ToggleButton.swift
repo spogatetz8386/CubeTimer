@@ -12,7 +12,7 @@ import UIKit
 class ToggleButton: UIView {
     private let hConst = 1
     private let wConst = 3
-    private let duration = 1
+    private let duration = 0.5
     let activeColor : UIColor = .green
     let inactiveColor : UIColor = .red
     var active : Bool = false
@@ -21,7 +21,15 @@ class ToggleButton: UIView {
         super.init(frame: frame)
         self.backgroundColor = self.inactiveColor
         self.setSize(size: size)
+        
         self.setupCircleView()
+        if Setting.current.doesUseInspectionTime {
+            self.active = true
+            UIView.animate(withDuration: TimeInterval(duration)) {
+                self.circleView.center = CGPoint(x: Int(self.frame.width) - Int(self.circleView.frame.width / 2) - Int(self.wConst * 2), y: Int(self.frame.height / 2))
+                self.backgroundColor = self.activeColor
+            }
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
