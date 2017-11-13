@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ToggleButton: UIView {
     private let hConst = 1
@@ -34,6 +35,25 @@ class ToggleButton: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return (appDelegate.managedObjectContext)!
+    }
+    
+    func saveSettings(){
+        let context = getContext()
+        let entity = NSEntityDescription.entity(forEntityName: "Settings", in: context)
+        let newObject = NSManagedObject(entity: entity!, insertInto: context)
+        
+        newObject.setValue(Setting.current.doesUseInspectionTime, forKey: "doesInspect")
+        
+        do{
+            try context.save()
+        } catch{
+            print("Error saving time!")
+        }
     }
     
     private func setSize(size: Int){
@@ -71,5 +91,6 @@ class ToggleButton: UIView {
                 self.backgroundColor = self.inactiveColor
             }
         }
+        self.saveSettings()
     }
 }

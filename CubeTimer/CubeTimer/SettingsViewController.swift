@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 struct Setting{
     static var current = Setting()
@@ -39,6 +40,8 @@ class SettingsController : UIViewController{
         inspectToggle.frame = CGRect(x: x, y: y, width: width, height: height)
     }
     
+    
+    
     func onSwipe(){
         guard let nav = self.navigationController else { return }
         nav.popViewController(animated: true)
@@ -55,10 +58,4 @@ class SettingsController : UIViewController{
         let height = 50
         inspectLabel.frame = CGRect(x: CGFloat(x), y: y, width: width, height: CGFloat(height))
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Updating settings")
-        Setting.current.doesUseInspectionTime = self.inspectToggle.active
-    }
-    
 }

@@ -245,6 +245,8 @@ class TimerView : UILabel{
         }
     }
     
+    
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.mode == Mode.holding && Setting.current.doesUseInspectionTime == false{
             link = CADisplayLink(target: self, selector: #selector(startTiming))

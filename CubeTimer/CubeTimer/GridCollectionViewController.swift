@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 class GridCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let squares = ["Solve", "Times", "Settings", "aa"]
@@ -6,9 +7,19 @@ class GridCollectionViewController: UICollectionViewController, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         print("loaded")
+        if getSettings()["doesInspect"]! {
+            Setting.current.doesUseInspectionTime = true
+        } else {
+            Setting.current.doesUseInspectionTime = false
+        }
         collectionView?.backgroundColor = UIColor.white
         self.navigationController?.navigationBar.isHidden = true
         collectionView?.register(NavCell.self, forCellWithReuseIdentifier: identifier)
+    }
+    
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return (appDelegate.managedObjectContext)!
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -31,6 +42,23 @@ class GridCollectionViewController: UICollectionViewController, UICollectionView
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func getSettings() -> [String : Bool]{
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Settings")
+        do{
+            let results = try getContext().fetch(request)
+            var dict : [String : Bool] = [:]
+            if(results.count > 0){
+                dict["doesInspect"] = (results[0] as AnyObject).value(forKey: "doesInspect") as! Bool
+            } else {
+                return ["doesInspect" : false]
+            }
+            return dict
+        } catch{
+            print("Error Fetching")
+        }
+        return ["doesInspect" : false]
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
