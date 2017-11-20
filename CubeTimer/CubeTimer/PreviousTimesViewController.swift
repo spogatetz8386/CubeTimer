@@ -21,6 +21,8 @@ class PreviousTimesViewController : UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Times"
         self.setupGesture()
         self.navigationController?.navigationBar.isHidden = true
         tableView.register(SavedTimeCell.self, forCellReuseIdentifier: identifier)
